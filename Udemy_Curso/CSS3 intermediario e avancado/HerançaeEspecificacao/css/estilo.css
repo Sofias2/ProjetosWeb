@@ -1,0 +1,30 @@
+/*Herança e Especificação */
+/*
+body{
+	color: hotpink;
+	border: 2px solid lightblue;
+}
+
+
+p{
+	color: blue !important;
+}
+
+p{
+	color: peru;
+}
+*/
+/* O seletor mais espefifico sera aplicado não 
+importando o outro, a menos se for utilizado o !important */
+
+*{
+	color: blueviolet;
+}
+
+h2{
+	color: salmon;
+}
+
+h2.verde{
+	color: green;
+}

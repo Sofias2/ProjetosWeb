@@ -1,0 +1,68 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+#container{
+    width:  960px; /*1080*/
+    margin: 0 auto;
+
+}
+
+
+#cabecalho{
+    background-color: #FFC0CB; 
+    width: 100%;
+    padding: 8px;
+    margin: 0 auto;
+    margin: 20px;
+    color: black;"
+}
+
+h1{
+    font-size: 40px;
+}
+
+ul, li{
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+
+p {
+    border: 3px solid yellow;
+    padding: 30px;
+    margin: 10px;
+    }
+		  
+nav{
+    width: 190px;
+    float: left;
+    padding: 20px;
+    background-color: #FFC0CB; 
+    margin-left: 20px;
+    margin-right: 10px;
+}
+
+#conteudo{
+    float: right;
+    width: 660px;
+    height: 600px;
+    background: #F5C1B1;
+}
+
+#contato{
+    float: right;
+    width: 550px;
+    padding: 0.5em 1.5em;
+    line-height: 2.1em;
+}
+
+
+
+h1{
+ text-align:center;
+ font-size: 1.8em;
+ padding: 15px;
+}

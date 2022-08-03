@@ -1,0 +1,220 @@
+
+
+/* Seletor Universal  
+*{
+border: 2px solid darkred;
+
+}
+*/
+
+/* Seletor  de filho
+li>a{ color: deeppink;
+text-decoration: none;
+
+}
+*/
+
+/* Seletor de descendente
+p a{
+color: lightgreen;
+
+}
+*/
+
+/* Seletor de irmão adjacente
+h1+p{
+	color: hotpink;
+}
+*/
+
+/* Seletor de irmão geral
+h1~p{
+	color: mediumvioletred;
+
+
+}
+*/
+
+/* Formularios
+
+fieldset{
+	margin: 1em 0;
+	padding: 1em;
+	border: 1px solid #ccc ;
+	background: #f8f8f8;
+}
+legend{
+	font-weight: bold;
+}
+label {
+	display: block;
+	cursor: pointer;
+}
+input [type="text"] {
+	width: 20em;
+}
+textarea{
+	width: 20em;
+	height: 10em;
+}
+
+ */
+
+/* part 2 
+body{
+	background: #643d87 url(../Imagens/fundo.jpg) no-repeat top center;
+}
+
+#container{
+width: 400px;
+height: 300px;
+background-color: rgba(255, 255, 255, 0.3);
+-webkit-border-radius: 10px;
+-moz-border-radius: 10px;
+border-radius: 10px;
+margin: 0 auto; /*centraliza
+margin-top: 120px;
+text-align: center;
+
+}
+
+#container img{
+width: 120px;
+height: 120px;
+margin-top: -60px;
+margin-bottom: 30px;
+}
+
+input{
+height: 40px;
+width: 80%;
+font-size: 18px;
+margin-bottom: 10px;
+background-color: #fff;
+padding-left: 40px;
+border: none;
+background-repeat: no-repeat;
+background-position: 10px ;
+}
+
+input.email{
+	background-image: url(../Imagens/icone-usuario.png);
+}
+
+input.senha{
+	background-image: url(../Imagens/icone-cadeado.png);
+}
+
+input.submit{
+	color: #fff;
+	background-color: #f79300;
+	border: 2px solid #db7d00;
+	padding: 5px 20px;
+	height: 45px;
+	width: 90%;
+	background: linear-gradient(to bottom, #faa600,#f68a00);
+} */
+
+/* Arredondamento com Imagens
+.caixa{
+	width: 400px;
+	background: #dedede url(../Imagens/fundo-arredondamento.png) repeat-y;
+
+}
+
+.caixa h2{
+ 	padding: 10px 20px 0 20px;
+ 	background: url(../Imagens/topo2.png) no-repeat left top;
+}
+
+.caixa p{
+padding: 0 20px;
+}
+
+.caixa .ultimo{
+background: url(../Imagens/baixo2.png) no-repeat left bottom;
+padding-bottom: 20px;
+}
+
+/*
+.caixa h2{
+	padding: 10px 20px 0 20px;
+}
+
+.caixa p{
+background: url(../Imagens/baixo2.png) no-repeat left bottom;
+padding: 0 20px 20px 20px;
+} */
+
+/* Parallax */
+
+/* configuração padrão */
+
+body, html {
+			margin: 0;
+			font: 16px "Lato", sans-serif;
+			color: #777;
+			height: 100%;
+		}
+
+		.conteudo {
+			color: #777;
+			background-color: white;
+			text-align: justify;
+			padding: 50px 80px;
+		}
+
+		h3 {
+			text-transform: uppercase;
+			color: #111;
+			text-align: center;
+		}
+
+		p{
+			margin-bottom: 20px;
+		}
+
+		/* Efeito Parallax
+		-------------------------------*/
+		.caixa1, .caixa2, .caixa3, .caixa4 {
+			position: relative;
+			height: 100%;
+			opacity: 0.7;
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-position: center;
+			background-attachment: fixed; 
+		}
+
+		.caixa1 {
+			background-image: url(../imagens/imagem1.jpg);
+		}
+
+		.caixa2 {
+			background-image: url(../imagens/imagem2.jpg);
+		}
+
+		.caixa3 {
+			background-image: url(../imagens/imagem3.jpg);
+		}
+
+		.caixa4 {
+			background-image: url(../imagens/imagem4.jpg);
+		}
+
+		.conteudo-titulo {
+			position: absolute;
+			left: 0;
+			top: 45%;
+			width: 100%;
+			text-align: center;
+		}
+
+		.conteudo-titulo span.titulo {
+			color: #fff;
+			background-color: #111;
+			padding: 18px;
+			font-size: 25px;
+			letter-spacing: 5px;
+			text-transform: uppercase;
+		}
