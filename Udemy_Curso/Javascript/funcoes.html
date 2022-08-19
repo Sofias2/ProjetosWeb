@@ -77,15 +77,70 @@
 
 
 		document.write(y)
-		*/
+		
 
 		//Funções Nativas - Date
 
 		var data = new Date()
-
+		
 		document.write(data.getDate() + '/' + (data.getMonth() + 1) + '/' + data.getFullYear() )
 		document.write('<br>')
 		
+		// adicionar / remover dias
+		document.write(data.toString())
+		data.setDate(data.getDate() - 1)
+		document.write('<hr>')
+		document.write(data.toString())
+
+		document.write('<hr>')
+
+		// adicionar / remover meses
+		document.write(data.toString())
+		data.setMonth(data.getMonth() - 1)
+		document.write('<hr>')
+		document.write(data.toString())
+
+		document.write('<hr>')
+		
+		// adicionar / remover anos
+		document.write(data.toString())
+		data.setFullYear(data.getFullYear() - 1)
+		document.write('<hr>')
+		document.write(data.toString())
+		*/
+
+		//15/01/2022
+		var data1 = new Date(2022, 0, 15)
+
+		//23/02/2022
+		var data2 = new Date(2022, 1, 23)
+
+
+		document.write(data1.toString())
+		document.write('<hr>')
+		document.write(data2.toString())
+
+		document.write('<hr>')
+
+		// conversão de datas para calcular
+		document.write(data1.getTime())
+		document.write('<hr>')
+		document.write(data2.getTime())
+
+		document.write('<hr>')
+
+		// quantidade de milissegundos entre data1 e data2
+		var miliseg_datas = Math.abs(data1.getTime() - data2.getTime())
+		document.write(miliseg_datas)
+
+		document.write('<hr>')
+
+		var miliseg_dia = (1*24*60*60*1000)
+		document.write('1 dia tem: ' + miliseg_dia + ' milisegundos')
+
+		document.write('<hr>')
+
+		document.write( 'A diferença entre data 1 e data 2 é de: '+ Math.ceil(miliseg_datas / miliseg_dia) + ' dias')
 
 
 	</script>
