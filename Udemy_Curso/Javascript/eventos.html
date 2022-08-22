@@ -15,11 +15,29 @@
 			onmouseout = saindo do elemento
 
 
-		 */
+		 
 		function acao() {
 			alert('Evento acionado')
 		}
+		
 
+		//Eventos - Teclado 
+		// onkeydown =  quando se aperta uma tecla
+		// onkeyup = quando se solta uma tecla 
+		// onkeypress =  quando a tecla selecionada é um caracter
+		function acao1 () {
+			alert("evendo acionado")
+			// body...
+		}*/
+
+		// Eventos - Janela
+		// onresize = quando a tela é redimensionada
+		// onscroll = acionado quando o scroll do mouse é usado
+		
+		//Eventos - Formulario
+		// onfocus = quando o elemento é clicado
+		// onblur = quando o elemento´perde o foco
+		//onchange = quando o estado do elemento é modificado
 	
 
 
@@ -27,10 +45,25 @@
 
 </head>
 <body>
-
+  <!--
 	<div onmouseout="acao()" style="background: hotpink; height: 150px; width: 150px;">
 		
+	</div> 
+
+	<input  onkeypress="acao1()" type="text" > 
+	<div style="height: 3000px; width: 125px; background: hotpink;"
 	</div>
+	-->
+
+	<input onfocus="console.log('Teste - Focus')"  onblur="console.log('Teste 2 - Sem Focus')" type="text">
+
+	<select onchange="console.log('Estado foi modificado')">
+		<option value="1"> Primeira Opção</option>
+		<option value="2"> Segunda Opção</option>
+		<option value="3"> Terceira Opção</option>
+	</select>
+
+
 
 </body>
 
