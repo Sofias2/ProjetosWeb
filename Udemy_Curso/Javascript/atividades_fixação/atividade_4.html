@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+
+ <script>
+
+ 	function cor_Fundo1() {
+ 		
+       document.getElementById('letras').style.background = 'yellow'
+ 		
+ 	
+ 	}
+
+ 	function cor_Fundo2() {
+
+ 		var numCampo = document.getElementById('letras').value
+
+ 		 if (numCampo.length > 3) {
+       	document.getElementById('letras').style.background = 'green'
+
+       } else  {
+
+       	document.getElementById('letras').style.background = 'red'
+
+       }
+
+       }
+
+
+ </script>
+
+</head>
+<body>
+
+	<input  id="letras" type="text" onfocus="cor_Fundo1()" onblur="cor_Fundo2()" >
+
+</body>
+
+
+
+</html>
