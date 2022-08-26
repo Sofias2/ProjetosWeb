@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+  
+	<script type="text/javascript">
+		
+		// While - Enquanto
+		y = 10
+		/*while ( y <= 15){
+			document.write(y + '<br>')
+			y++
+
+
+		}
+
+		// Do While - faça até - condição no final do loop
+
+		do {
+
+		document.write(y + '<br>')	
+
+		} while ( y <= 9) 
+
+		// For - Para faça
+
+		for (var i = 0; i <  y; i++) {
+			document.write(i + '<br>')		
+		}
+
+		
+
+		// Percorrendo e listando itens do Array
+
+		var listaFrutas = Array()
+
+		
+		listaFrutas[0] = 'Maça'
+		listaFrutas[1] = 'Uva'
+		listaFrutas[2] = 'Manga'
+		listaFrutas[3] = 'Carambola'
+
+		var y = 0
+		while (y<listaFrutas.length){
+			document.write(listaFrutas[y] + '<br>')
+			y++
+		}
+		
+
+		// Tabuada com laços encadeados
+
+		for (var y = 1; y <= 10; y++) {
+			
+		for (var i = 1; i <= 10; i++) {
+			document.write( y + ' x ' + i + ' = ' + (y*i) + '<br>')
+		}
+
+
+		document.write('<hr>')
+	}
+
+		// For in
+
+		var listaConvidados = ['Aline', 'Alice', 'Bruno', 'Cauã', 'Maria']
+
+		for (var x in listaConvidados){
+			console.log(listaConvidados[x])
+
+		}	*/
+
+		// Foreach - uma função 
+
+		var listaFuncionarios = ['Aline', 'Alice', 'Bruno', 'Cauã', 'Maria']
+
+		console.log(listaFuncionarios)
+
+		var f = function (valor, indice, array) {
+			
+			console.log('indice: ' + indice + ' valor: ' + valor)
+
+			if ( valor == 'Cauã') {
+				array[indice] = 'Novo valor'
+			}
+
+		}
+
+		listaFuncionarios.forEach(f)
+
+		console.log(listaFuncionarios)
+
+
+
+
+
+
+	</script>
+
+</head>
+<body>
+
+	
+
+</body>
+
+
+
+</html>

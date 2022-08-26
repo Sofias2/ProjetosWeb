@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+  
+	<script type="text/javascript">
+		
+	var video = Array()
+
+	video[1] = Array()
+	video[1]['nome'] = 'Boku no Hero'
+	video[1]['categoria'] = 'Anime'
+
+	function getVideo(video) {
+		
+		try{
+		console.log(video[0][nome])	
+		} catch (erro){
+			console.log(erro)
+			console.log('Agora é possivel tratar o erro')
+			throw new Error('Houve um erro mas não é culpa sua, estamos trabalhando nisso')
+		}
+
+
+		finally{
+			console.log('Sempre passa por aqui (try or catch)')
+		}
+
+		console.log('Não acabou')
+		
+
+	}
+
+	getVideo(video)
+
+
+
+
+
+	</script>
+
+</head>
+<body>
+
+	
+
+</body>
+
+
+
+</html>
