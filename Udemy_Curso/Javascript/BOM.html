@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+  
+	<script type="text/javascript">
+
+	// Bom- Window
+	/*
+	var janela
+	function abrirPopup() {
+		janela = window.open('http://www.google.com', 'nova_janela','width=200, height=100')
+		
+	}
+
+	function fecharPopup() {
+		janela.close()
+	
+	}
+
+	// Bom - Screen
+
+	var altura = window.screen.availHeight // representam o potencial 
+	var largura = window.screen.availWidth
+	document.write('O navegador tem ' + altura + ' de altura.' + '<br>')
+
+	document.write('O navegador tem ' + largura + ' de largura.')
+	*/
+
+	// Bom - Location
+	//window.location.href = "https://www.youtube.com/"
+
+	// Bom - Timing
+	//setTimeout(function () { document.write('Teste')}, 2000)
+	var x = 5
+	setInterval(function () { 
+		document.write(x + '<br>') 
+		x--
+
+		if (x === 0) {
+			window.location.reload()
+		}
+
+	}, 2000)
+
+	</script>
+
+</head>
+<body>
+	<!--
+	<button type="button" onclick="abrirPopup()"> abrir janela </button>
+	<button type="button" onclick="fecharPopup()"> fechar janela </button>
+	<button type="button" onclick="window.print()"> imprimir pagina </button> 
+	<button onclick="window.location.href = 'https://www.youtube.com/'"> Acessar Youtube</button>
+	<button onclick="window.location.href = 'https://www.google.com.br/'"> Acessar Google</button>-->
+
+	
+
+</body>
+
+
+
+</html>
