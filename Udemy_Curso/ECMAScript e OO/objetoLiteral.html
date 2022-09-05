@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+
+	<script>
+		//notação da classe
+		/*class Produto{
+			constructor(descricao,preco){
+				this.descricao = descricao
+				this.preco = preco
+			}
+			verDescricao(){
+				console.log(`${this.descricao} por apenas ${this.preco}`)
+			}
+		}
+
+		let produto = new Produto('Chave', 12)
+		produto.verDescricao()
+
+		//Notação Objeto Literal/Estático - objetos unicos
+			let produtoLiteral = {
+				descricao: 'Geladeria',
+				preco: 2800,
+				verDescricao: function () {
+				console.log(`${this.descricao} por apenas ${this.preco}`)	
+				}
+
+			}
+
+		produtoLiteral.verDescricao()
+
+		// Melhorias:
+
+		let nome = 'Anna'
+		let idade = '19'
+		let genero = 'feminino'
+		let profissao = 'Artista'
+
+		let objeto = {
+			nome: nome,
+			idade: idade,
+			genero: genero,
+			profissao: profissao,
+			exibirResumo: function () {
+				console.log(`${this.nome}, ${this.idade} anos, ${this.genero} é ${this.profissao}`)
+				// body...
+			}
+		}
+
+		console.log(objeto)
+		objeto.exibirResumo()
+
+		let objeto2 = {
+			nome,
+			idade,
+			genero,
+			profissao,
+			exibirResumo() {
+				console.log(`${this.nome}, ${this.idade} anos, ${this.genero} é ${this.profissao}`)
+				// body...
+			}
+		}
+
+		console.log(objeto2)
+		objeto2.exibirResumo()*/
+
+		//Modificando Valores
+
+		let pessoa ={
+			nome: 'João',
+			idade: 29
+		}
+
+		console.log(pessoa.nome)
+
+		pessoa.nome = 'Anna'
+		pessoa.idade = 22
+
+		console.log(pessoa.nome)
+		console.log(pessoa.idade)
+
+		// Criando novo atributo
+		pessoa.genero = 'Feminino'
+		pessoa.dizerOi = () => console.log('Ola, tudo bem?')
+
+		console.log(pessoa)
+		pessoa.dizerOi()
+
+
+
+
+
+
+	</script>
+
+</head>
+<body>
+
+</body>
+</html>
