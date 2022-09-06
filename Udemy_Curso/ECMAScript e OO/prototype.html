@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+
+	<script>
+		//modelo
+		/*
+		let a1 = {
+			cor: 'Amarelo',
+			modelo: 'Airnus a200',
+			levantarVoo: function () {
+				console.log('Levantando voou')
+			}
+
+		}
+
+		let AviaoF = function(){
+			this.cor = 'Pink'
+			this.modelo = 'Comercial'
+			this.levantarVoo = function () {
+				console.log('Levantando voou')
+				// body...
+			}
+		}
+
+		let a2 = new AviaoF()
+
+		class Aviaoc {
+			constructor(){
+				this.cor = 'Cinza'
+				this.modelo = 'Embraer E-Jets'
+			}
+			levantarVoo(){
+				console.log('Levantando Voou')
+			}
+		}
+
+		let a3 = new Aviaoc()
+
+		console.log(a2)
+		console.log(a3)*/
+
+		//Prototype Chain
+
+		Object.prototype.attr50 = 'J' // pode afetar toda a aplicação
+
+		let animal = { attr1:'a'}
+		let vertebrado = { __proto__: animal, attr2:'b'}
+		let ave = { __proto__: vertebrado, attr3:'c', attr2: 'x'}
+
+		console.log(ave.attr3,ave.attr2, ave.attr1, ave.attr50)
+		
+	</script>
+
+</head>
+<body>
+
+</body>
+</html>

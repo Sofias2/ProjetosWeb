@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+
+	<script>
+		//Spread= Espalhar estrutura de dados
+
+		let tituloTexto = 'Jaz aqui eu e apenas eu'
+
+		//String
+
+		console.log(tituloTexto)
+		console.log(...tituloTexto)
+		console.log([...tituloTexto])
+
+		//Arrays
+
+		let listaCursos1 = ['NodeJs e DB', 'ES6, TypeScript e Angular 4']
+		let listaCursos2 = ['Introdução Linux', 'Plataforma Android/OIS']
+		let listaCursoscompleto = ['Web Completo', 'Andoid Completo',...listaCursos1, ...listaCursos2]
+
+		console.log(listaCursoscompleto)
+
+		//Objetos
+		let pessoa = {
+			nome:'João', idade: 23
+		}
+
+		let clone = { endereco: 'Rua centovinte', ...pessoa}
+
+		console.log(clone)
+
+
+		//Rest = Juntar estrutura de dados - usado em funções
+
+		function soma(...param) {
+			let resultado = 0
+
+			console.log(param)
+
+			param.forEach(v=> resultado += v)
+
+			return resultado
+		}
+
+		console.log(soma(4,7,2,9,5))
+
+		function multiplicao(m,...p){
+			//console.log(m)
+			let resultado =0
+			//console.log(p)
+
+			p.forEach(v=> resultado += m * v)
+
+			return resultado
+
+		}
+
+		console.log(multiplicao(5,90,2,7))
+
+
+		
+	</script>
+
+</head>
+<body>
+
+</body>
+</html>

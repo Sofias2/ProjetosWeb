@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+
+	<script>
+		//Conceito dependendo da necessidade
+		let Bicicleta1 = {
+			cor: 'Cinza',
+			marcha: 'unica',
+			aro: 12,
+			pedalar(){
+				console.log("Método pedalar")
+			}
+
+		}
+
+		let Bicicleta2 = {
+			cor: 'Azul',
+			marcha: '15',
+			aro: 12,
+			pedalae(){
+				console.log("Método pedalar")
+			}
+		}
+
+		console.log(Bicicleta1)
+		console.log(Bicicleta2)
+
+		let BicletaFactory = function (cor,marcha,aro) {
+			return {
+			cor,
+			marcha,
+			aro,
+			pedalar(){
+			console.log("Método pedalar")
+
+			}
+			// body...
+		}}
+
+		let Bicicleta3 = BicletaFactory('Rosa', 13, 27)
+		console.log(Bicicleta3)
+
+		let Bicicleta4 = BicletaFactory('Rosa Choque', 13, 27)
+		console.log(Bicicleta4)
+
+
+		
+	</script>
+
+</head>
+<body>
+
+</body>
+</html>
