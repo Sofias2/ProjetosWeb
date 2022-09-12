@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+
+	<script>
+
+		// destructuring - Destruturação
+
+		/*let frutas = ['Uva', 'Carambola', 'Pera', 'Melão']
+
+		// verboza 
+		let a = frutas[0]
+		let b = frutas[1]
+		let c = frutas[2]
+
+		// [} a esquerda =  destruturação 
+		//let [a , b, , c] = frutas // pular um indice deixando vazio
+
+		//let [a,b,c,d,e = 'Chia'] = frutas
+
+		//console.log(a, b,c,d,e)
+
+		let coisas = [['Uva', 'Carambola', 'Pera', 'Melão'],['Jose','Ana']]
+		
+		let [[, , p]] = coisas
+
+		console.log(p)
+
+		//Destructuring Assignment - com objeto
+
+		let produto = {
+			descricao: 'Notebbok',
+			preco: 2000,
+			detalhes:{
+				fabricante:'sonic',
+				modelo: 'xvd'
+			}
+		}
+
+
+		//let { descricao, preco} = produto
+
+		let { descricao: d, preco: p, desconto: dc = 10, detalhes: {fabricante, modelo}} = produto
+		
+
+		console.log(d,p,dc,fabricante,modelo)*/
+
+		//Array - Função
+		/*
+		let ar = [20,30,40,50]
+
+		function teste([a,b]) {
+			console.log(a,b)
+		}
+
+		teste (ar) 
+
+		// Objeto
+
+		let obj = {
+			a: 10,
+			b: 20,
+			c: 30,
+			d: 40
+		}
+
+		function teste ({a,b}){
+			console.log(a,b)
+		}
+
+		teste(obj)*/
+
+		//Destructuring com arrest
+
+		/*let ar = [20,30,40,50]
+		let [a, ...resto ] = ar
+
+		console.log(a)
+		console.log(resto)*/
+
+
+		let obj = {
+			a: 10,
+			b: 20,
+			c: 30,
+			d: 40
+		}
+
+		let {a, ...rst } = obj
+
+		console.log(a)
+		console.log(rst)
+
+
+	</script>
+
+</head>
+<body>
+
+</body>
+</html>
