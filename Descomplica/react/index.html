@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React</title>
+
+    <!--  Reactjs   -->
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+
+</head>
+<body>
+    <div id="app">
+
+    </div>
+
+
+
+
+    <script>
+        // com função - menos verbosa 
+       function Hello(props){
+            return (
+              //  React.createElement('h1', {},'Olá Mundo' )
+              React.createElement('h1', {id: 'titulo', className: 'cabecalho'},
+                React.createElement('span', {}, 'Olá'),
+                React.createElement('strong', {}, props.label)
+                
+              )  
+            
+            )
+        }
+
+        ReactDOM.render(
+            React.createElement(Hello, {label: ' Sofia' }),
+            document.querySelector('#app')
+        ); 
+
+        // com classe - mais verbosa no futuro
+       /* class Hello extends React.Component {
+            render(){
+                return (
+                React.createElement('h1', {},'Olá Mundo' )
+            
+            )
+            }
+        }
+
+        ReactDOM.render(
+            React.createElement(Hello),
+            document.querySelector('#app')
+        ); */
+
+
+       
+
+    </script>  
+        
+</body>
+</html>

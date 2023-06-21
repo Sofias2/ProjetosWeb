@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom</title>
+</head>
+<body>
+
+    <button onclick=""></button>></button></button>>Excluir item</button>
+
+    <h1>Seletor do DOM</h1>
+    <li>Java</li>
+    <li>Python</li>
+    <li>NodeJS</li>
+
+    <div id="conteudo" class="mensagem"> </div>
+
+    
+
+        <ul id="lista">
+
+
+
+        </ul>
+
+        <ul id="listatime">
+
+        </ul>
+        
+    <form>
+        <input type="button" onclick="exemploEvento()" value="Apresentar">
+    </form>
+
+     <h1 id="exemplo" onmouseover="passarMousePorCima()" onmouseout="tirarMouse()"> Leopardo </h1>
+
+
+
+     <form name="formCadastro" onsubmit="validarFormulario()">
+        <label>Email </label>
+        <input type="email" id="email" />
+        <label>Nome </label>
+        <input type="text" id="nome" />
+
+        <button type="submit" onclick="novoItem()"> Enviar </button>
+
+
+     </form>
+
+
+
+
+    
+</body>
+<script>
+    //exemplo 1
+   /* window.alert("Alert!!!");
+   window.confirm("Deseja realmente excluir?");
+   var nome = window.prompt("Qual é o seu nome?");
+   var sobrenome = window.prompt("Qual é o seu sobrenome?");
+   window.alert("Seu nome é " + nome.toUpperCase() + " " + sobrenome.toUpperCase());*/
+
+    //exemplo 2 - como no windown prompt se é string, tem que converter para number int ou float para realmente somar
+  /* var n1 = Number.parseInt (window.prompt("Vamos somar! digite o primeiro numero"));
+   var n2 = Number.parseInt (window.prompt("Digite o segundo numero"));
+   var soma = n1+n2;
+   window.alert("A soma é " + soma);*/
+
+    //exemplo 3
+    /* function confirma(){
+        let confirmação = confirm("Você deseja excluir esse item?")
+        if (confirmação){
+            alert("Item excluido")
+        }else {
+            alert("operação cancelada")
+        }
+     }*/
+
+     //Pegando elementos
+
+     elemento0 = document.getElementsByTagName('li')[0];
+     elemento0.style.color = 'pink';
+
+     elementodiv = document.getElementById("conteudo");
+     elementodiv.innerHTML="<p> Estou colocando a tag p dentro da div </p>";
+
+
+     //Criando Elementos
+
+     var elemento = document.createElement("div");
+     elemento.innerText = "Incluindo texto na div";
+     elemento.style.backgroundColor = "lightgreen";
+     document.body.append(elemento);
+
+     
+    var lista = document.getElementById("lista");
+    var li = document.createElement("li");
+    li.textContent = "Quem somos";
+    lista.appendChild(li);
+
+    //Criando lista "dinamica"
+
+    times = ["aaaaa", "bbbb", "cccc", "dddd", "eeeee"];
+
+    var listadetimes = document.getElementById("listatime");
+
+    for (var i =0; i < times.length; i++){
+        var time = times[i];
+        var listItens = document.createElement('li');
+        listItens.innerText = time;
+        listItens.style.border = '1px solid green';
+        listadetimes.appendChild(listItens);
+    }
+
+    //Eventos
+
+    function exemploEvento(){
+        alert("mostrando o alert");
+    }
+
+    function passarMousePorCima(){
+        document.getElementById("exemplo").innerHTML = "Isso alisa meu pelo";
+        
+    }
+
+    function tirarMouse(){
+        document.getElementById("exemplo").innerHTML = "AFF Continua Alisando o meu pelo!!";
+    }
+
+    //Eventos com form
+
+    /*function novoItem(){
+        var camponome = document.getElementById("nome");
+        alert("Seu nome é: " + camponome.value);
+    }*/
+
+    //validacção de formulario
+
+    function validarFormulario(){
+        var nomePessoa = document.forms["formCadastro"]["nome"].value;
+        if(nomePessoa == ""){
+            alert("Por favor, informe o seu nome!");
+            event.preventDefault();
+        }else {
+            alert("Olá, " + nomePessoa);
+            event.preventDefault(); // não permite passar para outra opagina
+        }
+
+    }
+
+
+
+</script>
+</html>

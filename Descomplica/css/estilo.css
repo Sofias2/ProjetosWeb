@@ -1,0 +1,64 @@
+body{
+    font-weight: 400;
+    line-height: 2.2em;
+    margin: 0;
+    
+}
+
+header{
+    background-color: rgb(250, 193, 70);
+    margin: 0;
+   
+    
+}
+
+section, footer{
+    margin: 40px;
+}
+
+.titulo{
+    color: white;
+}
+
+h1{
+   padding-bottom: 15px;
+    font-size: 63px;
+    color: #303030;
+    text-align: center;
+   
+}
+
+h2{
+    font-size: 24px;
+    text-transform: uppercase;
+    color: #303030;
+    font-weight: 600;
+}
+
+
+table{
+    width: 100%;
+}
+
+table td{
+    color: #303030;
+    padding: 5px;
+}
+
+table tr:nth-child(even){
+    background-color: #696969;
+
+}
+
+table tr:nth-child(odd){
+    background-color: #dbdbdb;
+
+}
+
+table thead th{
+    background-color:#ed8f0b ;
+    color: white;
+}
+
+
+
