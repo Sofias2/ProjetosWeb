@@ -1,0 +1,267 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Task Pronta!</title>
+
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    
+    <script src="https://kit.fontawesome.com/e8e0d3433b.js" crossorigin="anonymous"></script>  
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+
+    <script src="js/verifica.js"> </script>
+    <script src="js/script.js" ></script>
+    <link rel="stylesheet" href="css/style.css">
+    
+  </head>
+  <body>
+    <header id="header">
+      <div class="row justify-content-between align-items-center w-100"> 
+        <div class="col-3  justify-content-start">
+          <button class="btn btn-danger float-left" id="sair"> Sair </button>
+        </div>
+      
+        <div class="col-9 justify-content-end align-items-end d-flex">
+          <h5 id="userName" class="mb-0 text-end  p-2 " style="color: aliceblue;"></h5>
+          <i class="fa-solid fa-caret-down text-end p-2" data-bs-toggle="modal" data-bs-target="#modalDadosUsuario" id="uDados" style="color: #ffffff;"></i>
+        </div>
+      </div>
+    </header>
+
+    <section id="table-page">
+      <div class="px-5">
+        <div class="row">
+
+          <!-- INICIO - Tabelas de Tarefas -->
+
+          <div class="col-8">
+            <div class="card table-card">
+              <div class="row card-header">
+                <div class="col-md-9">
+                  <h5>Suas Tarefas</h5>
+                </div>
+                <div class="col-md-3 d-flex align-items-end justify-content-end">
+                  <button type="button" class="btn btn-tarefa" data-bs-toggle="modal" data-bs-target="#modalAdicionarTarefa">Adicionar Tarefa</button>
+                </div>
+              </div>
+              <div class="row align-items-start">
+                <div class="col-md-9"></div>
+                <div class="col-md-3 justify-content-end d-flex" >
+                </div>
+              </div>
+              <div class="card-body">
+                
+                  <nav>
+                    <div class="nav nav-pills" id="nav-tab" role="tablist">
+                      <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-tarefas-abertas" type="button" role="tab" aria-controls="nav-home" aria-selected="true">Tarefas Abertas</button>
+                      <div class="mx-2"></div>
+                      <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-tarefas-concluidas" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Tarefas Concluídas</button>
+                    </div>
+                  </nav>
+                  
+               
+                <div class="tab-content" id="nav-tabContent">
+                  <div class="tab-pane fade show active" id="nav-tarefas-abertas" role="tabpanel" aria-labelledby="nav-home-tab" tabindex="0">
+                    <br><br>
+                    <div id="tabela-tarefas-abertas" class="tb"></div> <!-- Tabelas de Tarefas Abertas-->
+                  </div>
+                  <div class="tab-pane fade" id="nav-tarefas-concluidas" role="tabpanel" aria-labelledby="nav-profile-tab" tabindex="0">
+                    <br><br>
+                    <div id="tabela-tarefas-concluidas" class="tb"></div> <!-- Tabelas de Tarefas Concluidas-->
+                  </div>
+                </div>
+              </div>
+            </div> 
+          </div>
+
+          <!-- FIM - Tabelas de Tarefas -->
+
+          <br><br>
+
+        <!-- INICIO - Tabelas de Tarefas Atrasadas -->
+
+          <div class="col-4">
+            <div class="card table-card">
+              <div class="card-header">
+                <h5>Tarefas Atrasadas</h5>
+              </div>
+              <div class="card-body">
+                <div id="tabela-tarefas-atrasadas" class="tb"></div>
+              </div>
+            </div>
+          </div>
+
+        <!-- FIM - Tabelas de Tarefas Atrasadas -->
+
+        </div>
+
+        <!-- INICIO - Modal Creditos -->
+
+        <button type="button" class="btn btn-light mt-4 float-end" data-bs-toggle="modal" data-bs-target="#exampleModalCreditos">
+          Créditos
+        </button>
+
+        <div class="modal fade" id="exampleModalCreditos" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Crédito</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <h5>Bruna de Souza Aguiar</h5>
+                <h5>Bruno Henrique de Souza Lima</h5>
+                <h5>Guilherme Galvão Santos</h5>
+                <h5>Julio César dos Santos Raposo</h5>
+                <h5>Maria Isabel Ferreira Soares</h5>
+                <h5>Sofia da Silva Costa</h5>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- FIM - Modal Creditos -->
+      </div>
+    </section>
+
+    <!-- Modal Excluir Tarefa -->
+  
+    <div class="modal fade" id="modalExcluirTarefa" tabindex="-1"  aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalExcluirTarefa">Excluir Tarefa</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body row">
+            <form class="container">
+              <div class="modal-body">
+                <div class="row">
+                  <div class="col-12">
+                    Tem certeza que quer excluir essa tarefa? 
+                  </div>
+                </div> 
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                <button type="submit" class="btn btn-success" id="excluirTarefa">Sim</button>
+              </div>
+            </form>    
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal Adicionar Tarefa-->
+
+      <div class="modal fade" id="modalAdicionarTarefa" tabindex="-1"  aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="exampleModalAdicionarTarefa">Adicionar Tarefa</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body row">
+              <form class="container">
+                <div class="modal-body">
+                  <div class="row">
+                    
+                    <div class="form-group col-12 mb-3">
+                      <label for="tarefa">Titulo</label>
+                      <input type="text" name="tarefa" id="tarefa" style="width: 100%;">
+                    </div>
+                    
+                    <div class="form-group col-12 mb-3">
+                      <label for="exampleInputData">Data</label>
+                      <input type="date" class="form-control" id="inputDataCriacao" >
+                    </div>
+
+                    <div class="form-group col-12 mb-3">
+                      <label for="exampleInputData">Data</label>
+                      <input type="date" class="form-control" id="inputDataConclusao" >
+                    </div>
+
+                    <div class="form-group col-12 mb-3">
+                      <p>Descrição</p>
+                        <textarea class="form-control" id="textareaTarefa" rows="3"> </textarea>
+                    </div>
+                    
+                  </div> 
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                  <button type="submit" class="btn btn-success" id="AddTarefa">Adicionar</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+          
+    <!-- Modal Alterar Tarefa-->
+
+    <div class="modal fade" id="modalAlterarTarefa" tabindex="-1"  aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalAlterarTarefa">Alterar Tarefa</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body row">
+            <form class="container">
+              <div class="modal-body">
+                <div class="row">
+                  <form class="container">
+                    <div class="modal-body">
+                      <div class="row">
+                        
+                        <div class="tid" id="'.$d['tar_id'].'"></div>
+                        
+                        <div class="form-group col-12 mb-3">
+                          <label for="tarefa">Titulo</label>
+                          <input type="text" name="tarefa" id="alTarefa" style="width: 100%;"  >
+                        </div>
+                        
+                        <div class="form-group col-12 mb-3">
+                          <label for="exampleInputData">Data de Criação</label>
+                          <input type="date" class="form-control" id="alInputDataCriacao"  >
+                        </div>
+                    
+                        <div class="form-group col-12 mb-3">
+                          <label for="exampleInputData">Data de Conclusão</label>
+                          <input type="date" class="form-control" id="alInputDataConclusao" >
+                        </div>
+                        
+                        <div class="form-group col-12 mb-3">
+                          <p>Descrição</p>
+                            <textarea class="form-control" id="alTextareaTarefa" rows="3"> </textarea>
+                        </div>
+                    
+                      </div> 
+                      <div id="A" ></div>
+                    </div>
+                  </form> 
+                </div> 
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                <button type="submit" id="alterarTarefa" class="btn btn-success">Alterar</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+  </body>
+</html>

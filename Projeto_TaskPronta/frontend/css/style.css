@@ -1,0 +1,98 @@
+#home {
+	/*background-image: url("img/fundo.png");*/
+	background: #9e47c3;
+	color: black;
+	
+}
+
+body{
+    background-color: #000000d1;
+}
+
+
+#header {
+    background-color: #6a3685; 
+    width: auto; 
+    height: 60px; 
+    padding: 1rem; 
+    display:flex;
+    align-items:center;
+}
+#table-page {
+    margin: 3rem; 
+    height: 80vh;
+}
+.caixa{
+	padding: 60px 0;
+	border-bottom: 1px solid #e5e5e5 ;
+}
+
+footer p a{
+	margin: 5px;
+}
+
+.fundo{
+	background: #9e47c3;
+}
+
+.table-card {
+    height: 100%;
+}
+
+.table-hover tbody tr:hover td, .table-hover tbody tr:hover th {
+
+    background-color: #ffffff;
+}
+
+.table-click {
+    cursor: pointer !important;
+}
+.btn-tarefa {
+    background-color: #6a3685 ;
+    border-color: #6a3685;
+    color: #fff;
+}
+
+.btn-tarefa:hover {
+    background-color: #603179;
+    border-color: #603179;
+    color: white;
+}
+
+.btn{
+    --bs-btn-active-color: white;
+    --bs-btn-active-bg:#552b6b;
+    --bs-btn-active-border-color: white;
+
+}
+
+.btn-table-style {
+    background-color: #fff !important;
+    border-color: #fff !important;
+}
+.btn-table-style:hover {
+    background-color: #9e47c3 !important;
+    border-color: #9e47c3 !important;
+}
+.btn-table-style:active {
+    background-color: #9e47c3 !important ;
+    border-color: #9e47c3 !important;
+    box-shadow: #9e47c3 !important;
+}
+.btn-table-style:enabled {
+    background-color: #9e47c3 !important ;
+    border-color: #9e47c3 !important;
+    box-shadow: #9e47c3 !important;
+}
+
+.tarefa-concluida{
+    background-color: #72d975;
+}
+
+.tarefa-atrasada{
+    background-color: #d9705f;
+}
+
+.table{
+    --bs-table-bg: transparent !important;
+}
