@@ -3,10 +3,10 @@ import { useState } from 'react';
 import { Button } from '../Button/Button';
 import ModalBS from 'react-bootstrap/Modal';
 
-export const Modal = ({title, children, open, controls = [] }) => {
+export const Modal = ({title, children, open, controls = [], onHide }) => {
     return(
 
-        <ModalBS show={open} onHide={() => {}}>
+        <ModalBS show={open} onHide={onHide}>
         <ModalBS.Header closeButton>
           <ModalBS.Title>{title}</ModalBS.Title>
         </ModalBS.Header>

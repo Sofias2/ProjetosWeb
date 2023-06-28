@@ -12,7 +12,7 @@ function verificar(){
 		var gênero = ''
 		var img = document.createElement('img')
 		img.setAttribute('id', 'foto')
-		img.setAttribute('padding', '5px')
+
 
 		if (fgen[0].checked) {
 			gênero = 'Homem'

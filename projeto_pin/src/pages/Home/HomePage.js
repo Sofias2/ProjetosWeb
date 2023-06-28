@@ -1,27 +1,59 @@
 import React, { Component }  from 'react';
+import { useState, useEffect } from 'react';
 import ReactDOM  from 'react-dom';
 import {Card} from '../../components/Card/Card';
+import { CardContainer } from '../../containers/Card/Card';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import { ModalSavePin } from "../../containers/ModalSavePin/ModalSavePin";
 import { ModalCreateFolder } from '../../containers/ModalCreateFolder/ModalCreateFolder';
 import { Notification } from '../../components/Notification/Notification';
+import { useAppContext } from '../../store/AppContext';
+import { saveFolderSuccessType } from '../../store/types';
+import { saveFolder } from '../../services/pinService';
+import {fetchPinsAction  } from '../../store/actions';
+
 
 export const HomePage = () => {
+    const { state, dispatch } = useAppContext();
+    const [showFeedback, setShowFeedback] = useState(false);
+
+    const pinsNormalized = state.pins.map(pin => ({
+            ...pin,
+            total: state.folders.filter(folder => (
+                folder.pins.includes(pin.id)
+            )).length 
+    }))
+
+    useEffect(() => {
+        fetchPinsAction (dispatch);
+    }, [])
+
+    useEffect(() => {
+        if (state.type === saveFolderSuccessType){
+            setShowFeedback(true);
+        }
+
+    }, [state.type])
+
     return (
         <div>
-            <ModalSavePin open={false} />
-            <ModalCreateFolder open={false} />  
-            <Notification message='Criado com Sucesso!' onClose={() => {
-                console.log('Clicou em Fechar')
-            }} />
+            <ModalSavePin open={state.mode === 'savePin'} />
+            <ModalCreateFolder open={state.mode === 'createFolder'} />  
+           
+             {showFeedback && (<Notification message='Criado com Sucesso!' onClose={() => {
+               setShowFeedback(false)
+            }} />)}
           
         <Container>
         <Row>
-            <Col xs={12} md={2}> <Card title="matematica" image="https://cdn.wikirby.com/thumb/8/87/KPR_Warp_Star_artwork.png/800px-KPR_Warp_Star_artwork.png" total={0} /> </Col>
-            <Col xs={12} md={2}> <Card title="geografia" image="https://cdn.wikirby.com/thumb/8/87/KPR_Warp_Star_artwork.png/800px-KPR_Warp_Star_artwork.png" total={0} /> </Col>
-            
+            {pinsNormalized.map(pin => (
+                 <Col key={pin.id} xs={12} md={2}> <CardContainer {...pin} /> </Col>
+
+            ))}
+           
+              
         </Row>
         </Container>
         </div>

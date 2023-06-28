@@ -15,11 +15,11 @@ export const ListGroup = ({itens = []}) => {
                   <div className="fw-bold">{item.title}</div>
                  
                 </div>
-                {item.total ? (
+               
                     <Badge bg="primary" pill>
                         {item.total}
                     </Badge> 
-                ) : null} 
+              
                 
               </ListGroupBS.Item>
             ))}
