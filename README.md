@@ -1,2 +1,2 @@
 # ProjetosWeb
-Projetos e Estudos de Desenvolvimento Web >-&lt;
+Projetos e Estudos de Desenvolvimento Web;
